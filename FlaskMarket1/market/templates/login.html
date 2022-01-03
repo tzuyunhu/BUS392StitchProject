@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login To stitch
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:black">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://dcassetcdn.com/design_img/3666577/122073/122073_21153742_3666577_d4608d30_image.png" alt="" width='200' height='200'>
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Login
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.password.label() }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+
+            <br>
+
+
+            <div class="checkbox mb-3">
+               <h6>Do not have an account?</h6>
+               <a class="btn btn-outline-danger btn-light" href="{{ url_for('register_page') }}">Register</a>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-danger") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

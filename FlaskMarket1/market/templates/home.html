@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome To stitch!
+{% endblock %}
+{% block content %}
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="color: black>
+        <div class="col-md-10 p-lg-5 mx-auto my-5">
+            <img class="mb-4" src="https://dcassetcdn.com/design_img/3666577/122073/122073_21153742_3666577_d4608d30_image.png" alt="" width='200' height='200'>
+            <p class="lead font-weight-normal">Start shopping by clicking the link below!</p>
+            <a class="btn btn-danger" href="{{ url_for('market_page') }}">Shop Here</a>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+{% endblock %}
